@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="/images/favicon.ico" rel="icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>Warhammer Fantasy Roleplay 2 edition character generator</h1>
+        </center>
+        <hr> <!--Pozioma kreska-->
+        
+        <input type="image" width="200" height="200" src="images/dice.png" id="button"><br>
+        
+        <table>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Prevent from rolling?</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th></th>
+                <th><input type="text" id="name"></th>
+                <th></th>
+                <th><input type="checkbox" id="prevent_name"></th>
+            </tr>
+            <tr>
+                <th>Race</th>
+                <th></th>
+                <th>
+                    <select id="race_dropdown">
+                        <option value="dwarf">Dwarf</option>
+                        <option value="elf">Elf</option>
+                        <option value="halfling">Halfling</option>
+                        <option value="human">Human</option>
+                    </select>
+                </th>
+                <th></th>
+                <th><input type="checkbox" id="prevent_race"></th>
+            </tr>
+            <tr>
+                <th>Starting career</th>
+                <th><input type="checkbox" id="career_race_sensitive" checked> Race sensitive</input></th>
+                <th><select id="career_dropdown">
+
+                </select></th>
+                <th></th>
+                <th><input type="checkbox" id="prevent_career"></th>
+            </tr>
+            <tr>
+                <th>Completed careers</th>
+                <th></th>
+                <th>
+                    <select id="comp_car">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Current career</th>
+                <th></th>
+                <th>
+                    <select id="current_career_dropdown">
+
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <th></th>
+                <th>
+                    <select id="sex_dropdown">
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </th>
+                <th></th>
+                <th><input type="checkbox" id="prevent_sex"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Physical traits</th>
+                <th></th>
+                <th></th>
+                <th><input type="checkbox" id="prevent_physical"></th>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <th></th>
+                <th><input id="age"></th>
+            </tr>
+            <tr>
+                <th>Eye colour</th>
+                <th></th>
+                <th><input id="eye_colour"></th>
+            </tr>
+            <tr>
+                <th>Hair colour</th>
+                <th></th>
+                <th><input id="hair_colour"></th>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <th></th>
+                <th><input id="weight"></th>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <th></th>
+                <th><input id="height"></th>
+            </tr>
+            <tr>
+                <th>Star sign</th>
+                <th></th>
+                <th>
+                    <select id="star_sign">
+
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th>Birthplace</th>
+                <th><input id="birthplace_1"></th>
+                <th><input id="birthplace_2"></th>
+            </tr>
+            <tr>
+                <th>Number of siblings</th>
+                <th></th>
+                <th><input id="number_of_siblings"></th>
+            </tr>
+            <tr>
+                <th>Distinguishing marks</th>
+                <th><input id="distinguishing_marks_1"></th>
+                <th><input id="distinguishing_marks_2"></th>
+            </tr>
+            <tr>
+                <th>Characteristic</th>
+                <th>Starting</th>
+                <th>Advance</th>
+                <th>Current</th>
+                <th><input type="checkbox" id="prevent_characteristics"></th>
+            </tr>    
+            <tr>
+                <th></th>
+                <th>Main profile</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>WS</th>
+                <th><input id="char1"></th>
+                <th><input id="adv1"></th>
+                <th><input id="curr1"></th>
+            </tr>
+            <tr>
+                <th>BS</th>
+                <th><input id="char2"></th>
+                <th><input id="adv2"></th>
+                <th><input id="curr2"></th>
+            </tr>
+            <tr>
+                <th>S</th>
+                <th><input id="char3"></th>
+                <th><input id="adv3"></th>
+                <th><input id="curr3"></th>
+            </tr>
+            <tr>
+                <th>T</th>
+                <th><input id="char4"></th>
+                <th><input id="adv4"></th>
+                <th><input id="curr4"></th>
+            </tr>
+            <tr>
+                <th>Ag</th>
+                <th><input id="char5"></th>
+                <th><input id="adv5"></th>
+                <th><input id="curr5"></th>
+            </tr>
+            <tr>
+                <th>Int</th>
+                <th><input id="char6"></th>
+                <th><input id="adv6"></th>
+                <th><input id="curr6"></th>
+            </tr>
+            <tr>
+                <th>WP</th>
+                <th><input id="char7"></th>
+                <th><input id="adv7"></th>
+                <th><input id="curr7"></th>
+            </tr>
+            <tr>
+                <th>Fel</th>
+                <th><input id="char8"></th>
+                <th><input id="adv8"></th>
+                <th><input id="curr8"></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th>Secondary profile</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>A</th>
+                <th><input value="1"></th>
+                <th><input id="adv9"></th>
+                <th><input id="curr9"></th>
+            </tr>
+            <tr>
+                <th>W</th>
+                <th><input id="starting_wounds"></th>
+                <th><input id="adv10"></th>
+                <th><input id="curr10"></th>
+            </tr>
+            <tr>
+                <th>SB</th>
+                <th><input id="SB"></th>
+                <th><input value="-"></th>
+                <th><input id="curr11"></th>
+            </tr>
+            <tr>
+                <th>TB</th>
+                <th><input id="TB"></th>
+                <th><input value="-"></th>
+                <th><input id="curr12"></th>
+            </tr>
+            <tr>
+                <th>M</th>
+                <th><input id="mov"></th>
+                <th><input id="adv_mov"></th>
+                <th><input id="curr13"></th>
+            </tr>
+            <tr>
+                <th>Mag</th>
+                <th><input value="0"></th>
+                <th><input id="adv11"></th>
+                <th><input id="curr14"></th>
+            </tr>
+            <tr>
+                <th>IP</th>
+                <th><input value="0"></th>
+                <th><input value="0"></th>
+                <th><input value="0"></th>
+            </tr>
+            <tr>
+                <th>FP</th>
+                <th><input id="fate_points"></th>
+                <th><input value="0"></th>
+                <th><input id="curr15"></th>
+            </tr>
+        </table>
+    
+        <hr>
+        <p><a href="http://www.games-workshop.com/" target="_blank">Games workshop</a> website</p>
+        <p><a href="https://www.drivethrurpg.com/browse.php?filters=100006_0_0_0_0&src=fid100006" target="_blank">DriveTrhuRPG</a> - WFRP 2ed rulebooks</p>
+        
+    <script src="index.js"></script>
+</body>
+</html>
